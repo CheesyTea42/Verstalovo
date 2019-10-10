@@ -1,0 +1,86 @@
+Список команд
+
+apels@DESKTOP-FP3HVMT MINGW64 ~
+$ cd C:\Users\apels\github
+bash: cd: C:Usersapelsgithub: No such file or directory
+
+apels@DESKTOP-FP3HVMT MINGW64 ~
+$ cd C:/Users/apels/github
+
+apels@DESKTOP-FP3HVMT MINGW64 ~/github (master)
+$ mkdir second-clone
+
+apels@DESKTOP-FP3HVMT MINGW64 ~/github (master)
+$ cd second-clone
+
+apels@DESKTOP-FP3HVMT MINGW64 ~/github/second-clone (master)
+$ git clone git@github.com:CheesyTea42/Verstalovo.git
+Cloning into 'Verstalovo'...
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 9 (delta 0), reused 6 (delta 0), pack-reused 0
+Receiving objects: 100% (9/9), done.
+
+apels@DESKTOP-FP3HVMT MINGW64 ~/github/second-clone (master)
+$ ls -la
+total 0
+drwxr-xr-x 1 apels 197609 0 окт 11 00:39 ./
+drwxr-xr-x 1 apels 197609 0 окт 11 00:38 ../
+drwxr-xr-x 1 apels 197609 0 окт 11 00:39 Verstalovo/
+
+apels@DESKTOP-FP3HVMT MINGW64 ~/github/second-clone (master)
+$ cd Verstalovo
+
+apels@DESKTOP-FP3HVMT MINGW64 ~/github/second-clone/Verstalovo (master)
+$ git branch branch_2
+
+apels@DESKTOP-FP3HVMT MINGW64 ~/github/second-clone/Verstalovo (master)
+$ git checkout branch_2
+Switched to branch 'branch_2'
+
+apels@DESKTOP-FP3HVMT MINGW64 ~/github/second-clone/Verstalovo (branch_2)
+$ git checkout develop
+Switched to a new branch 'develop'
+Branch 'develop' set up to track remote branch 'develop' from 'origin'.
+
+apels@DESKTOP-FP3HVMT MINGW64 ~/github/second-clone/Verstalovo (develop)
+$ git merge branch_1
+merge: branch_1 - not something we can merge
+
+Did you mean this?
+        origin/branch_1
+
+apels@DESKTOP-FP3HVMT MINGW64 ~/github/second-clone/Verstalovo (develop)
+$ git checkout branch_1
+Switched to a new branch 'branch_1'
+Branch 'branch_1' set up to track remote branch 'branch_1' from 'origin'.
+
+apels@DESKTOP-FP3HVMT MINGW64 ~/github/second-clone/Verstalovo (branch_1)
+$ git checkout develop
+Switched to branch 'develop'
+Your branch is up to date with 'origin/develop'.
+
+apels@DESKTOP-FP3HVMT MINGW64 ~/github/second-clone/Verstalovo (develop)
+$ git merge branch_1
+Updating 2553d1d..152a050
+Fast-forward
+ index.html | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+apels@DESKTOP-FP3HVMT MINGW64 ~/github/second-clone/Verstalovo (develop)
+$ git merge branch_2
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+apels@DESKTOP-FP3HVMT MINGW64 ~/github/second-clone/Verstalovo (develop|MERGING)
+$ git merge branch_2
+Already up to date.
+
+apels@DESKTOP-FP3HVMT MINGW64 ~/github/second-clone/Verstalovo (develop)
+$ git push
+Everything up-to-date
+
+apels@DESKTOP-FP3HVMT MINGW64 ~/github/second-clone/Verstalovo (develop)
+$
